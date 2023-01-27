@@ -277,6 +277,11 @@ footer a {
     .about-me {
         flex-direction: column;
     }
+
+    footer {
+        flex-flow: column-reverse;
+        height: 70px;
+    }
 }
 
 
