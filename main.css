@@ -125,9 +125,10 @@ main {
 .about-me {
     display:flex;
     min-height: 270px;
+    width: min(80%, 1200px);
     align-items: center;
     justify-content: center;
-    padding: 70px 15%;
+    margin: 70px auto;
     animation: fade-from-top 1s ease-out;
 }
 
