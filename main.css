@@ -14,6 +14,7 @@
 
     --h1-size: 3rem;
     --h3-size: 2rem;
+    --shadow: 0 0 110px 10px var(--secondary-bg);
 }
 
 
@@ -109,6 +110,7 @@ main {
     max-height: 95%;
     border-radius: 50%;
     padding: 5px;
+    box-shadow: var(--shadow);
 }
 
 .about-me__text {
@@ -119,14 +121,17 @@ main {
 }
 
 .about-me__text h1 {
+    z-index: 10;
     color: var(--primary-fg);
     margin: 0;
-    font-size: var(--h1-size)
+    font-size: var(--h1-size);
+    
 }
 
 .about-me__text hr {
     border: 1px solid var(--secondary-bg);
     margin: 10px 0;
+    box-shadow: var(--shadow);
 }
 
 .dot-separator {
@@ -141,6 +146,7 @@ main {
     height: 15px;
     margin: 5px;
     line-height: 10px;
+    box-shadow: var(--shadow);
 }
 
 .my-skills {
@@ -161,6 +167,7 @@ main {
 .my-skills hr {
     width: 90%;
     border: 1px solid var(--secondary-bg);
+    box-shadow: var(--shadow);
 }
 
 
