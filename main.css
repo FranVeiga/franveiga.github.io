@@ -104,7 +104,6 @@ main {
     background-image: url("img/shapes-opacity-corrected.png");
     background-blend-mode: color-dodge;
     background-repeat: repeat;
-    padding-bottom: 300px;
     font-size: 1.1rem;
 }
 
@@ -216,8 +215,6 @@ main {
 
 .skills {
     display: grid;
-    grid-auto-rows: 300px;
-    grid-auto-flow: column;
     grid-gap: 80px;
     margin: 15px 10px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -251,6 +248,20 @@ main {
     line-height: 1.5;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--primary-fg);
+    padding: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary-fg);
+}
 
 
 /*               */
@@ -267,6 +278,7 @@ main {
         flex-direction: column;
     }
 }
+
 
 
 
