@@ -117,6 +117,11 @@ main {
     animation: up-and-down 2s ease-in-out infinite;
 }
 
+.arrow-invisible {
+    opacity: 0;
+    transition: 1s opacity;
+}
+
 .about-me {
     display:flex;
     min-height: 270px;
@@ -238,6 +243,7 @@ main {
 .skills__skill p {
     text-align: center;
 }
+
 
 
 /*               */
