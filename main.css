@@ -58,8 +58,11 @@ header {
 main {
     color: var(--primary-fg);
     font-family: 'Source Sans Pro', sans-serif;
-    background: var(--main-bg);
     padding-top: 80px;
+    background: var(--main-bg);
+    background-image: url("img/shapes-opacity-corrected.png");
+    background-blend-mode: color-dodge;
+    background-repeat: repeat;
 }
 
 .about-me {
