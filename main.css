@@ -52,11 +52,13 @@ header {
 
 .header-text h1 {
     font-weight: 500;
+    font-size: 3rem;
 }
 
 .header-text h3 {
     color: var(--secondary-fg);
     font-weight: 500;
+    font-size: 1.6rem;
 }
 
 main {
