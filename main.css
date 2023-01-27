@@ -7,6 +7,7 @@
 :root {
     --main-bg: #03001c;
     --secondary-bg: #301e67;
+    --dark-bg: #020016;
     --primary-color: #5b8fb9;
     --secondary-color: #b6eada;
     --primary-fg: #f4f9e9;
@@ -29,12 +30,11 @@ header {
 }
 
 nav {
-    position: fixed;
+    position: absolute; 
     z-index: 200;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    /* background-color: var(--main-bg); */
 }
 
 .nav__logo {

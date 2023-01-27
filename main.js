@@ -15,3 +15,14 @@ function arrowScrollHandler(e) {
     }
 }
 window.addEventListener("scroll", arrowScrollHandler)
+
+
+
+
+// Make the navigation bar appear as the user scrolls down
+
+function updateOpacity(opacity) {
+    let nav = document.querySelector("nav")
+    nav.style.backgroundColor = "rgba()"
+}
+
