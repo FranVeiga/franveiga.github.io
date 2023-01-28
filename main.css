@@ -89,6 +89,7 @@ nav {
 .header-title h1 {
     font-weight: 500;
     font-size: 3rem;
+    text-align: center;
 }
 
 .header-title h3 {
@@ -207,6 +208,7 @@ main {
     margin: 0;
     font-size: var(--h1-size);
     padding: 15px;
+    text-align: center;
 }
 
 .my-skills hr {
@@ -262,6 +264,7 @@ main {
 .tools h1 {
     font-size: var(--h1-size);
     margin: 15px;
+    text-align: center;
 }
 
 .tools hr {
@@ -275,23 +278,24 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: min(80%, 700px);
-    margin: 15px 10px;
+    width: min(90%, 700px);
+    margin: 15px 10px 60px 10px;
 }
 
 .tools__box__div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
-    padding: 50px;
+    width: min(15%, 100px);
+    height: min(15%, 100px);
+    padding: min(10%, 50px);
+    margin: 10px;
 }
 
 .tools__box__img {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: min(20%, 100px);
+    height: min(20%, 100px);
     transition: transform 1s, filter 1s;
 }
 
