@@ -17,12 +17,17 @@ function arrowScrollHandler(e) {
 window.addEventListener("scroll", arrowScrollHandler)
 
 
+let toolBoxes = document.querySelectorAll(".tools__box__div")
 
-
-// Make the navigation bar appear as the user scrolls down
-
-function updateOpacity(opacity) {
-    let nav = document.querySelector("nav")
-    nav.style.backgroundColor = "rgba()"
-}
-
+toolBoxes.forEach((toolBox) => {
+    let toolImg = toolBox.getElementsByTagName("img")[0];
+    let toolLabel = toolBox.getElementsByTagName("p")[0];
+    toolBox.addEventListener("mouseenter", (e) => {
+        toolLabel.classList.add("tools__box__label-visible")
+        toolImg.classList.add("tools__box__img-active")
+    })
+    toolBox.addEventListener("mouseleave", (e) => {
+        toolLabel.classList.remove("tools__box__label-visible")
+        toolImg.classList.remove("tools__box__img-active")
+    })
+})
