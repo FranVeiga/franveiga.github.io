@@ -279,7 +279,7 @@ main {
     justify-content: center;
     align-items: center;
     width: min(90%, 700px);
-    margin: 15px 10px 60px 10px;
+    margin: 15px 10px;
 }
 
 .tools__box__div {
@@ -315,6 +315,34 @@ main {
     opacity: 1;
 }
 
+.portfolio {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 70px auto 0px auto;
+}
+
+.portfolio h1 {
+    font-size: var(--h1-size);
+    margin: 15px;
+    text-align: center;
+}
+
+.portfolio hr {
+    width: 90%;
+    border: 1px solid var(--secondary-bg);
+    box-shadow: var(--shadow);
+}
+
+.portfolio__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+}
 
 footer {
     display: flex;
