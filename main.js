@@ -1,22 +1,18 @@
-var last_known_scroll_position = 0;
-var ticking = false;
-
 // Make the moving arrow disappear when the page is first scrolled.
 
-function disappearArrow() {
-    let arrow = document.querySelector(".down-arrow");
-    arrow.classList.add("arrow-invisible")
-}
-
 function arrowScrollHandler(e) {
+    const arrow = document.querySelector(".down-arrow");
     if (window.scrollY != 0) {
-        disappearArrow()
-        window.removeEventListener("scroll", arrowScrollHandler)
+        arrow.classList.add("arrow-invisible")
+    } else {
+        arrow.classList.remove("arrow-invisible")
     }
 }
 window.addEventListener("scroll", arrowScrollHandler)
 
 
+
+// Create the effect on hovering 'tools'
 let toolBoxes = document.querySelectorAll(".tools__box__div")
 
 toolBoxes.forEach((toolBox) => {
@@ -30,4 +26,23 @@ toolBoxes.forEach((toolBox) => {
         toolLabel.classList.remove("tools__box__label-visible")
         toolImg.classList.remove("tools__box__img-active")
     })
+})
+
+
+
+// Appear on scroll
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+        if (en.isIntersecting) {
+            en.target.classList.add("visible")
+            en.target.classList.remove("hidden")
+        }
+    })
+}, {threshold: 0.2})
+
+let hidden = document.querySelectorAll(".hidden")
+
+hidden.forEach((el) => {
+    observer.observe(el)
 })

@@ -287,7 +287,6 @@ main {
     justify-content: center;
     align-items: center;
     width: min(15%, 100px);
-    height: min(15%, 100px);
     padding: min(10%, 50px);
     margin: 10px;
 }
@@ -295,7 +294,6 @@ main {
 .tools__box__img {
     position: absolute;
     width: min(20%, 100px);
-    height: min(20%, 100px);
     transition: transform 1s, filter 1s;
 }
 
@@ -331,6 +329,27 @@ footer {
 footer a {
     text-decoration: none;
     color: var(--primary-fg);
+}
+
+
+/*                 */
+/* Special Classes */
+/*                 */
+
+
+/* Used for appear-on-scroll */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(3px);
+    transition: all .5s;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: none;
+    transition: all .5s;
 }
 
 
