@@ -77,8 +77,10 @@ toolBoxes.forEach((toolBox) => {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
         if (en.isIntersecting) {
+            console.log(en)
             en.target.classList.add("visible")
             en.target.classList.remove("hidden")
+            observer.unobserve(en.target) // Stop observing when element has appeared
         }
     })
 }, {
