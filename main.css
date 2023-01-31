@@ -5,8 +5,8 @@
 
 :root {
     --main-bg: #03001c;
-    --secondary-bg: #301e67;
     --dark-bg: #020016;
+    --secondary-bg: #301e67;
     --primary-color: #5b8fb9;
     --secondary-color: #b6eada;
     --primary-fg: #f4f9e9;
@@ -32,11 +32,14 @@ header {
 }
 
 nav {
-    position: absolute; 
+    position: fixed; 
     z-index: 200;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    background-color: rgba(2, 0, 21, 00);
+    
 }
 
 .nav__logo {
@@ -55,7 +58,7 @@ nav {
     width: 30px;
     height: 30px;
     padding: 15px;
-    transition: .5s transform ;
+    /* transition: .5s transform ; */
 }
 
 .nav__socials__item:hover {

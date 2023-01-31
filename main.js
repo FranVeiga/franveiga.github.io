@@ -1,14 +1,44 @@
 // Make the moving arrow disappear when the page is first scrolled.
 
-function arrowScrollHandler(e) {
+function ScrollHandler() {
+
+    // Make the moving arrow disappear when the page is first scrolled.
     const arrow = document.querySelector(".down-arrow");
     if (window.scrollY != 0) {
         arrow.classList.add("arrow-invisible")
     } else {
         arrow.classList.remove("arrow-invisible")
     }
+
+
+    // Make the navbar change its opacity when reaching the main body of the
+    // page
+    
+    const navbar = document.querySelector("nav");
+    const navbarIcons = document.querySelectorAll(".nav__logo, .nav__socials__item");
+    if (window.scrollY >= 300 && window.scrollY <= 580) {
+        let scrollStart = 300
+        let scrollEnd = 580
+
+        let scrollProgress = (window.scrollY - scrollStart) / (scrollEnd - scrollStart)
+
+        let opacityLevel = scrollProgress;
+        let heightLevel = 95 - scrollProgress * 95 * 2/5;
+        let scaleLevel = 1 - scrollProgress * 2/5;
+
+        navbar.style.backgroundColor = `rgba(1,0,21,${opacityLevel})`
+        navbar.style.height = `${heightLevel}px`
+        navbarIcons.forEach(icon => {
+            icon.style.transform = `scale(${scaleLevel})`
+        })
+
+    } else if (window.scrollY < 300) {
+        navbar.style.backgroundColor = `rgba(1,0,21,0)`
+    } else {
+        navbar.style.backgroundColor = `rgba(1,0,21,1)`
+    }
 }
-window.addEventListener("scroll", arrowScrollHandler)
+window.addEventListener("scroll", ScrollHandler)
 
 
 
@@ -18,11 +48,11 @@ let toolBoxes = document.querySelectorAll(".tools__box__div")
 toolBoxes.forEach((toolBox) => {
     let toolImg = toolBox.getElementsByTagName("img")[0];
     let toolLabel = toolBox.getElementsByTagName("p")[0];
-    toolBox.addEventListener("mouseenter", (e) => {
+    toolBox.addEventListener("mouseenter", () => {
         toolLabel.classList.add("tools__box__label-visible")
         toolImg.classList.add("tools__box__img-active")
     })
-    toolBox.addEventListener("mouseleave", (e) => {
+    toolBox.addEventListener("mouseleave", () => {
         toolLabel.classList.remove("tools__box__label-visible")
         toolImg.classList.remove("tools__box__img-active")
     })
@@ -31,7 +61,6 @@ toolBoxes.forEach((toolBox) => {
 
 
 // Appear on scroll
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
         if (en.isIntersecting) {
@@ -39,10 +68,11 @@ const observer = new IntersectionObserver((entries) => {
             en.target.classList.remove("hidden")
         }
     })
-}, {threshold: 0.2})
+}, {
+    threshold: 0.2
+})
 
 let hidden = document.querySelectorAll(".hidden")
-
 hidden.forEach((el) => {
-    observer.observe(el)
+    observer.observe(el) // Make the observer observe all elements with the class 'hidden'
 })
