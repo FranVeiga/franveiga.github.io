@@ -44,9 +44,17 @@ function ScrollHandler() {
     } else if (window.scrollY < 300) { 
         // Fix for bar not reaching full trnasparency
         navbar.style.backgroundColor = `rgba(1,0,21,0)`
+        navbar.style.height = `95px`
+        navbarIcons.forEach(icon => {
+            icon.style.transform = `scale(1)`
+        })
     } else {
         // Fix for bar not reaching full opacity
         navbar.style.backgroundColor = `rgba(1,0,21,1)`
+        navbar.style.height = `57px`
+        navbarIcons.forEach(icon => {
+            icon.style.transform = `scale(0.6)`
+        })
     }
 }
 window.addEventListener("scroll", ScrollHandler)
