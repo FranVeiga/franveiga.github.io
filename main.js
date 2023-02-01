@@ -42,14 +42,14 @@ function ScrollHandler() {
         })
 
     } else if (window.scrollY < 300) { 
-        // Fix for bar not reaching full trnasparency
+        // Fix 
         navbar.style.backgroundColor = `rgba(1,0,21,0)`
         navbar.style.height = `95px`
         navbarIcons.forEach(icon => {
-            icon.style.transform = `scale(1)`
+            icon.style.removeProperty("transform")
         })
     } else {
-        // Fix for bar not reaching full opacity
+        // Fix 
         navbar.style.backgroundColor = `rgba(1,0,21,1)`
         navbar.style.height = `57px`
         navbarIcons.forEach(icon => {
